@@ -1,0 +1,8 @@
+This directory should contain project images for each architect's portfolio.
+
+For example:
+- project1-1.jpg through project1-4.jpg for the first architect
+- project2-1.jpg through project2-4.jpg for the second architect
+- And so on for all 8 architects
+
+For a real implementation, you would need to add actual project images here.

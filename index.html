@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architex - Architectural Freelancing Specialists</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="login-button">
+                <button>Login</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="logo-container">
+                <div class="bird-container">
+                    <img id="origami-bird" src="assets/origami.png" alt="Origami Bird" />
+                    <div class="sparkle-container">
+                        <object class="sparkle" type="image/svg+xml" data="assets/sparkle.svg"></object>
+                    </div>
+                    <div class="shine"></div>
+                </div>
+                <div class="text-container">
+                    <h1 id="logo-text">arCHItex</h1>
+                    <p id="tagline">Architectural Freelancing Specialists</p>
+                    <p id="service-area">Servicing architectural firms across South Africa</p>
+                    <p id="price-tag">From as little as R295/hr</p>
+                </div>
+                <div class="nda-banner">
+                    <div class="nda-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.2426 7.75736L7.75736 16.2426" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.75736 7.75736L16.2426 16.2426" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Your intellectual property is protected with our comprehensive <strong>NDA Policy</strong></p>
+                </div>
+            </div>
+
+            <nav id="main-nav">
+                <a href="hire.html" class="nav-button">Hire Us Now</a>
+                <a href="how-it-works.html" class="nav-button">How It Works</a>
+                <a href="benefits.html" class="nav-button">Benefits</a>
+                <a href="contact.html" class="nav-button">Contact Us</a>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Popup Containers -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+
+
+    <!-- How It Works Popup -->
+    <div class="popup" id="popup-how">
+        <div class="popup-bird-container"></div>
+        <div class="popup-content">
+            <h2>How It Works</h2>
+            <p>Our platform simplifies the process of connecting clients with architectural professionals.</p>
+            <ol>
+                <li>Create a project brief describing your needs</li>
+                <li>Receive proposals from qualified architects</li>
+                <li>Review portfolios and select your preferred professional</li>
+                <li>Collaborate through our secure platform</li>
+                <li>Approve milestones and release payments</li>
+                <li>Complete your project with full satisfaction</li>
+            </ol>
+            <button class="popup-close">Close</button>
+        </div>
+    </div>
+
+    <!-- Benefits Popup -->
+    <div class="popup" id="popup-benefits">
+        <div class="popup-bird-container"></div>
+        <div class="popup-content">
+            <h2>Benefits</h2>
+            <p>Architex offers numerous advantages for both clients and architectural professionals.</p>
+            <h3>For Clients:</h3>
+            <ul>
+                <li>Access to a global network of architectural talent</li>
+                <li>Competitive pricing and transparent fee structure</li>
+                <li>Secure payment protection</li>
+                <li>Quality assurance and satisfaction guarantee</li>
+            </ul>
+            <h3>For Architects:</h3>
+            <ul>
+                <li>Steady stream of quality projects</li>
+                <li>Reduced marketing and client acquisition costs</li>
+                <li>Secure payment system</li>
+                <li>Professional portfolio showcase</li>
+            </ul>
+            <button class="popup-close">Close</button>
+        </div>
+    </div>
+
+    <!-- Contact Us Popup -->
+    <div class="popup" id="popup-contact">
+        <div class="popup-bird-container"></div>
+        <div class="popup-content">
+            <h2>Contact Us</h2>
+            <p>We're here to help with any questions or concerns you may have.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p><strong>Email:</strong> info@architex.com</p>
+                <p><strong>Phone:</strong> 084 377 8230</p>
+                <p><strong>Address:</strong> 44 Swemmer Avenue, Sunningdale, Johannesburg</p>
+                <p><strong>Hours:</strong> Monday-Friday, 8am-5pm SAST</p>
+            </div>
+            <button class="popup-close">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

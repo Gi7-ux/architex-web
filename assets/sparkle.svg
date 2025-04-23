@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sparkle-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <g id="sparkle">
+    <!-- Main glow -->
+    <circle cx="50" cy="50" r="15" fill="url(#sparkle-gradient)" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1s" repeatCount="1"/>
+      <animate attributeName="r" values="5;20;15" dur="1s" repeatCount="1"/>
+    </circle>
+    
+    <!-- Sparkle rays -->
+    <g opacity="0.9">
+      <!-- Horizontal ray -->
+      <line x1="20" y1="50" x2="80" y2="50" stroke="#ffffff" stroke-width="2">
+        <animate attributeName="stroke-width" values="0;3;0" dur="1s" repeatCount="1"/>
+      </line>
+      
+      <!-- Vertical ray -->
+      <line x1="50" y1="20" x2="50" y2="80" stroke="#ffffff" stroke-width="2">
+        <animate attributeName="stroke-width" values="0;3;0" dur="1s" repeatCount="1"/>
+      </line>
+      
+      <!-- Diagonal rays -->
+      <line x1="30" y1="30" x2="70" y2="70" stroke="#ffffff" stroke-width="2">
+        <animate attributeName="stroke-width" values="0;3;0" dur="1s" repeatCount="1"/>
+      </line>
+      
+      <line x1="70" y1="30" x2="30" y2="70" stroke="#ffffff" stroke-width="2">
+        <animate attributeName="stroke-width" values="0;3;0" dur="1s" repeatCount="1"/>
+      </line>
+    </g>
+    
+    <!-- Small sparkles -->
+    <circle cx="50" cy="30" r="2" fill="#ffffff">
+      <animate attributeName="r" values="0;3;0" dur="1s" repeatCount="1"/>
+    </circle>
+    
+    <circle cx="70" cy="50" r="2" fill="#ffffff">
+      <animate attributeName="r" values="0;3;0" dur="1s" repeatCount="1" begin="0.1s"/>
+    </circle>
+    
+    <circle cx="50" cy="70" r="2" fill="#ffffff">
+      <animate attributeName="r" values="0;3;0" dur="1s" repeatCount="1" begin="0.2s"/>
+    </circle>
+    
+    <circle cx="30" cy="50" r="2" fill="#ffffff">
+      <animate attributeName="r" values="0;3;0" dur="1s" repeatCount="1" begin="0.3s"/>
+    </circle>
+  </g>
+</svg>

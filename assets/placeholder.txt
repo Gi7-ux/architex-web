@@ -1,0 +1,8 @@
+For the How It Works page, the following images should be added:
+
+1. submit-project.jpg - An image showing someone submitting a project brief
+2. match-architects.jpg - An image showing architect selection/matching
+3. collaborate.jpg - An image showing collaboration between client and architect
+4. complete-project.jpg - An image showing project completion/final deliverables
+
+These images should be placed in the assets directory.

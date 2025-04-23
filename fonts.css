@@ -1,0 +1,16 @@
+/* Custom Font Declarations */
+@font-face {
+    font-family: 'Freedom';
+    src: url('fonts/Freedom-10eM.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Architex';
+    src: url('fonts/Architex.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bird Display</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .bird-container {
+            width: 200px;
+            height: 150px;
+            margin: 20px auto;
+            border: 2px solid #6a8d73;
+            padding: 10px;
+            background-color: white;
+        }
+        #origami-bird {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        h1 {
+            color: #6a8d73;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0f0e5;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bird Image Test</h1>
+        <div class="bird-container">
+            <img id="origami-bird" src="assets/origami.png" alt="Origami Bird">
+        </div>
+        <div class="info">
+            <p>If you can see the bird above, the image is loading correctly.</p>
+            <p>If not, there might be an issue with the image path or file.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bird = document.getElementById('origami-bird');
+            
+            // Log whether the image loaded successfully
+            bird.onload = () => {
+                console.log('Bird image loaded successfully');
+            };
+            
+            bird.onerror = () => {
+                console.error('Failed to load bird image');
+                document.querySelector('.info').innerHTML = '<p style="color: red;">Error: Failed to load the bird image. Check the console for details.</p>';
+            };
+        });
+    </script>
+</body>
+</html>

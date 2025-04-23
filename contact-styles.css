@@ -1,0 +1,334 @@
+/* Contact Page Styles */
+
+/* Header Styles */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    min-height: 180px;
+    padding-left: 10px;
+}
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-arrow span {
+    margin-left: 0.5rem;
+}
+
+.back-arrow:hover {
+    transform: translateX(-5px);
+}
+
+.bird-container {
+    width: 150px;
+    height: 112px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    margin-bottom: 0;
+    overflow: visible;
+    z-index: 10;
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#origami-bird {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    transition: transform 0.3s ease;
+    opacity: 1;
+}
+
+#origami-bird:hover {
+    transform: scale(1.1);
+}
+
+/* Login Button Styles */
+.login-button {
+    position: relative;
+    z-index: 20;
+}
+
+.login-button button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Main Content Styles */
+.contact-main {
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Page Intro Styles */
+.page-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.page-intro.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-intro h1 {
+    font-family: 'Freedom', 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.page-intro p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    transition-delay: 0.2s;
+}
+
+.contact-form-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-info-container {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    transition-delay: 0.4s;
+}
+
+.contact-info-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form Styles */
+.contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(87, 146, 126, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-top: 0.3rem;
+}
+
+.checkbox-group label {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Info Styles */
+.contact-info {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.contact-info h2 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.info-icon {
+    margin-right: 1rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.info-text p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* NDA Policy Styles */
+.nda-policy {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary-color);
+}
+
+.nda-policy h2 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.nda-policy p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.nda-policy ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.nda-policy li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contact-section {
+        flex-direction: column;
+    }
+    
+    .contact-form-container,
+    .contact-info-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-intro h1 {
+        font-size: 2.8rem;
+    }
+    
+    .page-intro p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form,
+    .contact-info,
+    .nda-policy {
+        padding: 1.5rem;
+    }
+    
+    .page-intro h1 {
+        font-size: 2.2rem;
+    }
+}
