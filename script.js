@@ -93,27 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
         shine.classList.add('shine-active');
     };
 
-    // Function to animate buttons one by one
-    const animateButtonsSequentially = () => {
-        return new Promise((resolve) => {
+    // Function to show the buttons
+    const showNavButtons = () => {
+        setTimeout(() => {
+            // Animate all nav buttons
+            const navButtons = document.querySelectorAll('#main-nav .nav-button');
             navButtons.forEach((button, index) => {
                 setTimeout(() => {
                     button.classList.add('animate-button');
                 }, index * 200); // Stagger the button animations
             });
-
-            // Resolve after all buttons have appeared
-            setTimeout(resolve, navButtons.length * 200 + 500);
-        });
+        }, 1000); // Delay the button animation by 1 second
     };
 
     // Function to start the animation sequence
     const startAnimationSequence = () => {
         // Wait for a short delay to ensure everything is ready
         setTimeout(() => {
-            // Animate bird flying in
-            origamiBird.style.opacity = '1';
-            origamiBird.style.transform = 'translate(0, 0) rotate(0deg)';
+            // Then animate bird flying in
+            origamiBird.classList.add('animate-bird');
 
             // After bird animation, animate text
             setTimeout(() => {
@@ -136,23 +134,38 @@ document.addEventListener('DOMContentLoaded', () => {
                                 // After text animation, flip the bird and show sparkle
                                 setTimeout(() => {
                                     flipBirdWithSparkle().then(() => {
-                                        // After flip, animate buttons one by one
-                                        animateButtonsSequentially().then(() => {
-                                            // After all buttons appear, start the shine effect
-                                            startShineEffect();
-                                        });
+                                        // Start the shine effect after flip
+                                        startShineEffect();
                                     });
                                 }, 800);
                             }, 200);
                         }, 200);
-                    }, 200);
-                }, 500);
-            }, 2000); // Increased delay to match the bird animation
+                    }, 500);
+                }, 2000); // Delay for bird animation
+            });
         }, 800);
     };
 
     // Start the animation sequence immediately
     startAnimationSequence();
+
+    // Create the Intersection Observer
+    const birdObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Show the navigation buttons
+                showNavButtons();
+
+                // Stop observing the bird container
+                birdObserver.unobserve(birdContainer);
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the bird is visible
+    });
+
+    // Start observing the bird container
+    birdObserver.observe(birdContainer);
 
     // Add hover effect to buttons
     navButtons.forEach(button => {
@@ -218,8 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
         flyingBird.src = 'assets/origami.png';
         flyingBird.style.position = 'fixed';
         flyingBird.style.zIndex = '200';
-        flyingBird.style.width = `${originalBirdPosition.width / 8}px`;
-        flyingBird.style.height = `${originalBirdPosition.height / 8}px`;
+        flyingBird.style.width = `150px`;
+        flyingBird.style.height = `150px`;
         flyingBird.style.top = `${originalBirdPosition.top + originalBirdPosition.height / 2}px`;
         flyingBird.style.left = `${originalBirdPosition.left + originalBirdPosition.width / 2}px`;
         flyingBird.style.transform = 'translate(-50%, -50%)';
@@ -233,8 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             flyingBird.style.top = `${popupRect.top + popupRect.height / 2}px`;
             flyingBird.style.left = `${popupRect.left + popupRect.width / 2}px`;
-            flyingBird.style.width = '100px';
-            flyingBird.style.height = '80px';
+            flyingBird.style.width = '150px';
+            flyingBird.style.height = '120px';
 
             // Show the popup bird when the flying animation completes
             setTimeout(() => {
@@ -277,8 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             flyingBird.style.top = `${originalBirdPosition.top + originalBirdPosition.height / 2}px`;
             flyingBird.style.left = `${originalBirdPosition.left + originalBirdPosition.width / 2}px`;
-            flyingBird.style.width = `${originalBirdPosition.width / 8}px`;
-            flyingBird.style.height = `${originalBirdPosition.height / 8}px`;
+            flyingBird.style.width = `150px`;
+            flyingBird.style.height = `150px`;
 
             // Show the original bird when the flying animation completes
             setTimeout(() => {

@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Schedule a briefing with Architex. Professional architectural services across South Africa from as little as R345/hr all inclusive">
+    <meta name="keywords"
+        content="hire architect, architectural services, South Africa, architectural consulting, schedule briefing">
+    <meta name="author" content="Architex">
+    <meta property="og:title" content="Hire Us Now - Architex">
+    <meta property="og:description"
+        content="Schedule a briefing with our architectural team. Professional services from RR345/hr all inclusive.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.architex.co.za/hire.html">
+    <meta property="og:image" content="https://www.architex.co.za/assets/og-image.jpg">
     <title>Hire Us Now - Architex</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="hire-styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="fonts.css?v=1.0.1">
+    <link rel="stylesheet" href="styles.css?v=1.0.1">
+    <link rel="stylesheet" href="hire-styles.css?v=1.0.1">
+    <link rel="stylesheet" href="common.css?v=1.0.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Calendly inline widget styles -->
+    <!-- Security meta tags -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://assets.calendly.com https://calendly.com https://*.calendly.com https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://assets.calendly.com https://*.calendly.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.calendly.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.calendly.com; frame-src https://assets.calendly.com https://calendly.com https://*.calendly.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <!-- Calendly inline widget styles and script -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDE12345"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ABCDE12345');
+    </script>
 </head>
+
 <body>
     <div class="container">
         <header class="page-header">
             <div class="left-section">
                 <a href="index.html" class="back-arrow">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27 20H13" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M20 27L13 20L20 13" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="18" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path d="M27 20H13" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M20 27L13 20L20 13" stroke="var(--primary-color)" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="20" cy="20" r="18" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span>Back to Home</span>
                 </a>
@@ -29,16 +60,26 @@
                     <img src="assets/origami.png" alt="Bird Logo" id="follow-bird">
                 </div>
             </div>
-            <div class="login-button">
-                <button>Login</button>
+            <div class="header-buttons">
+                <div class="login-button">
+                    <a href="login.html"><button>Login</button></a>
+                </div>
             </div>
         </header>
 
         <main class="hire-main">
             <section class="page-intro">
                 <h1>Hire Us Now</h1>
-                <p>Schedule a briefing with our team to discuss your architectural needs. From as little as R295/hr, we provide professional architectural services to firms across South Africa.</p>
+                <p>Schedule a briefing with our team to discuss your architectural needs. From as little as
+                    <b>R345/hr</b> all
+                    inclusive, we
+                    provide professional architectural services to firms across South Africa.
+                </p>
             </section>
+
+            <section class="schedule-section">
+            </section>
+
             <section class="process-overview">
                 <div class="process-steps">
                     <div class="process-step">
@@ -76,7 +117,11 @@
                 <div class="calendly-container">
                     <h2>Schedule Your Briefing</h2>
                     <p>Select a time that works for you to discuss your project needs with our team.</p>
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/architex-sa/project-briefing" style="min-width:320px;height:700px;"></div>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/leor-architex/30min"
+                        style="min-width:300px;height:630px;overflow:hidden;"></div>
+                    <script src="hire-calendly.js" type="text/javascript" async></script>
+                    <!-- Calendly inline widget end -->
                 </div>
                 <div class="briefing-info">
                     <div class="info-card">
@@ -88,33 +133,67 @@
                             <li>Set realistic milestones and deadlines</li>
                             <li>Answer any questions you may have about our process</li>
                         </ul>
-                        <p>After the briefing, we'll provide you with a detailed proposal tailored to your specific needs.</p>
+                        <p>After the briefing, we'll provide you with a detailed proposal tailored to your specific
+                            needs.</p>
                     </div>
                     <div class="info-card">
                         <h3>Our Expertise</h3>
                         <p>Our team specializes in a wide range of architectural services, including:</p>
                         <ul>
-                            <li>Residential architecture</li>
-                            <li>Commercial and office spaces</li>
-                            <li>Retail and hospitality</li>
-                            <li>Industrial and manufacturing</li>
-                            <li>Sustainable and green building design</li>
-                            <li>Interior architecture and space planning</li>
+                            <li>exposure to all building categories and scope of architectural work</li>
+                            <li>access to top tier BIM management for larger, collaborative projects</li>
+                            <li>principal level oversight with 20+ years experience, offering exceptional value at
+                                unmatched pricing</li>
+                            <li>on the ground expertise and experience with innovative building tech</li>
                         </ul>
-                        <p>With rates starting from R295/hr, we offer flexible solutions to meet your project needs and budget.</p>
+                        <p>With rates starting from <strong>R345/hr</strong>, which includes a pro rata cover price of
+                            our licensed software, we offer flexible solutions to meet your
+                            project needs and budget.</p>
                     </div>
-                    <div class="info-card nda-card">
+                </div>
+            </section>
+
+            <!-- Guarantee Section (Full Width) -->
+            <section class="guarantee-section">
+                <div class="guarantee-box animate">
+                    <div class="guarantee-content">
+                        <h2>Our Guarantee</h2>
                         <h3>Confidentiality Guaranteed</h3>
-                        <p>We understand the importance of protecting your intellectual property. All client projects are covered by our comprehensive NDA policy, ensuring your ideas and designs remain secure.</p>
-                        <p>If you'd like to review our NDA before the meeting, please mention this when scheduling your appointment.</p>
+                        <p>We understand the importance of protecting your intellectual property. All client projects
+                            are covered by our comprehensive NDA policy, ensuring your ideas and designs remain secure.
+                        </p>
+                        <p>If you'd like to review our NDA before the meeting, please mention this when scheduling your
+                            appointment.</p>
                     </div>
+                </div>
+            </section>
+
+            <!-- Page Links -->
+            <section class="page-links">
+                <div class="links-container">
+                    <a href="benefits.html" class="page-link">Learn About Our Benefits</a>
+                    <a href="how-it-works.html" class="page-link">See How It Works</a>
                 </div>
             </section>
         </main>
     </div>
 
-    <!-- Calendly inline widget script -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <script src="hire-script.js"></script>
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/27723636632" class="whatsapp-button" target="_blank" rel="noopener noreferrer"
+            aria-label="Contact us on WhatsApp">
+            <img src="assets/whatsapp-logo.png" alt="WhatsApp Logo">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright">© 2025 Architex. All Rights Reserved.</p>
+            <p class="designer-credit">Website designed by <a href="https://apexplanners.co.za" target="_blank"
+                    rel="noopener noreferrer">Apex Planners</a></p>
+        </div>
+    </footer>
+
+    <script src="hire-script.js?v=1.0.1"></script>
 </body>
-</html>

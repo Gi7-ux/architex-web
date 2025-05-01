@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Architex for professional architectural services. Based in Johannesburg, South Africa, we serve architectural firms nationwide.">
+    <meta name="keywords"
+        content="contact architect, architectural services, South Africa, Johannesburg, architectural consulting">
+    <meta name="author" content="Architex">
+    <meta property="og:title" content="Contact Us - Architex">
+    <meta property="og:description"
+        content="Get in touch with our team for professional architectural services across South Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.architex.co.za/contact.html">
+    <meta property="og:image" content="https://www.architex.co.za/assets/og-image.jpg">
     <title>Contact Us - Architex</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="fonts.css?v=1.0.1">
+    <link rel="stylesheet" href="styles.css?v=1.0.1">
+    <link rel="stylesheet" href="contact-styles.css?v=1.0.1">
+    <link rel="stylesheet" href="common.css?v=1.0.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Security meta tags -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://assets.calendly.com https://calendly.com https://*.calendly.com https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://assets.calendly.com https://*.calendly.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.calendly.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.calendly.com; frame-src https://assets.calendly.com https://calendly.com https://*.calendly.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDE12345"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ABCDE12345');
+    </script>
 </head>
+
 <body>
     <div class="container">
         <header class="page-header">
             <div class="left-section">
                 <a href="index.html" class="back-arrow">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27 20H13" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M20 27L13 20L20 13" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="20" cy="20" r="18" stroke="var(--primary-color)" stroke-width="2"/>
+                        <path d="M27 20H13" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M20 27L13 20L20 13" stroke="var(--primary-color)" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="20" cy="20" r="18" stroke="var(--primary-color)" stroke-width="2" />
                     </svg>
                     <span>Back to Home</span>
                 </a>
@@ -27,20 +57,27 @@
                     <img id="origami-bird" src="assets/origami.png" alt="Origami Bird">
                 </div>
             </div>
-            <div class="login-button">
-                <button>Login</button>
+            <div class="header-buttons">
+                <div class="portfolio-button">
+                    <a href="portfolio.html"><button>Portfolio</button></a>
+                </div>
+                <div class="login-button">
+                    <a href="login.html"><button>Login</button></a>
+                </div>
             </div>
         </header>
 
         <main class="contact-main">
             <section class="page-intro">
                 <h1>Contact Us</h1>
-                <p>We're here to help with any questions or concerns you may have. Reach out to us using the form below.</p>
+                <p>We're here to help with any questions or concerns you may have. Reach out to us using the form below.
+                </p>
             </section>
 
             <section class="contact-section">
                 <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-formspree-id"
+                        method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -74,55 +111,63 @@
                         <h2>Get in Touch</h2>
                         <div class="info-item">
                             <div class="info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92V19.92C22 20.4704 21.7893 20.9996 21.4142 21.3747C21.0391 21.7498 20.5099 21.9605 19.96 21.96C17.4223 21.7383 14.9575 20.9364 12.77 19.62C10.7338 18.4035 8.97345 16.6432 7.75698 14.607C6.43858 12.4128 5.63674 9.94178 5.41998 7.39998C5.41945 7.12643 5.47692 6.85565 5.58883 6.60474C5.70074 6.35384 5.86462 6.12878 6.07199 5.94478C6.27936 5.76077 6.52464 5.62152 6.79099 5.53552C7.05735 5.44952 7.33723 5.41839 7.61198 5.43998H10.612C11.1639 5.43575 11.6974 5.63766 12.1114 6.01268C12.5253 6.3877 12.7907 6.90719 12.862 7.45998C12.9788 8.39168 13.2318 9.30209 13.612 10.16C13.7728 10.5227 13.8212 10.9203 13.752 11.3072C13.6829 11.6941 13.4991 12.0505 13.222 12.33L12.122 13.43C13.2389 15.5381 14.9508 17.2499 17.059 18.37L18.159 17.27C18.4385 16.9929 18.7949 16.8091 19.1818 16.74C19.5687 16.6708 19.9663 16.7192 20.329 16.88C21.1869 17.2601 22.0973 17.5132 23.029 17.63C23.5867 17.7013 24.1098 17.9723 24.4839 18.3931C24.858 18.8139 25.0546 19.3543 25.042 19.91L22 16.92Z" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22 16.92V19.92C22 20.4704 21.7893 20.9996 21.4142 21.3747C21.0391 21.7498 20.5099 21.9605 19.96 21.96C17.4223 21.7383 14.9575 20.9364 12.77 19.62C10.7338 18.4035 8.97345 16.6432 7.75698 14.607C6.43858 12.4128 5.63674 9.94178 5.41998 7.39998C5.41945 7.12643 5.47692 6.85565 5.58883 6.60474C5.70074 6.35384 5.86462 6.12878 6.07199 5.94478C6.27936 5.76077 6.52464 5.62152 6.79099 5.53552C7.05735 5.44952 7.33723 5.41839 7.61198 5.43998H10.612C11.1639 5.43575 11.6974 5.63766 12.1114 6.01268C12.5253 6.3877 12.7907 6.90719 12.862 7.45998C12.9788 8.39168 13.2318 9.30209 13.612 10.16C13.7728 10.5227 13.8212 10.9203 13.752 11.3072C13.6829 11.6941 13.4991 12.0505 13.222 12.33L12.122 13.43C13.2389 15.5381 14.9508 17.2499 17.059 18.37L18.159 17.27C18.4385 16.9929 18.7949 16.8091 19.1818 16.74C19.5687 16.6708 19.9663 16.7192 20.329 16.88C21.1869 17.2601 22.0973 17.5132 23.029 17.63C23.5867 17.7013 24.1098 17.9723 24.4839 18.3931C24.858 18.8139 25.0546 19.3543 25.042 19.91L22 16.92Z"
+                                        stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </div>
                             <div class="info-text">
                                 <h3>Phone</h3>
-                                <p>084 377 8230</p>
+                                <p>0723636632</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M22 6L12 13L2 6" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                        stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M22 6L12 13L2 6" stroke="var(--primary-color)" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
                             <div class="info-text">
                                 <h3>Email</h3>
-                                <p>info@architex.com</p>
+                                <p>info@architex.co.za</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                                        stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                                        stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </div>
                             <div class="info-text">
                                 <h3>Address</h3>
-                                <p>44 Swemmer Avenue<br>Sunningdale<br>Johannesburg</p>
+                                <p>88 Swemmer Road<br>Sunningdale<br>Johannesburg</p>
                             </div>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2.99996V12L17 14.5M12 2.99996C16.9706 2.99996 21 7.02939 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02939 7.02944 2.99996 12 2.99996Z" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="info-text">
-                                <h3>Hours</h3>
-                                <p>Monday-Friday<br>8am-5pm SAST</p>
-                            </div>
-                        </div>
+
                     </div>
 
                     <div class="nda-policy">
                         <h2>Our NDA & IP Protection Policy</h2>
-                        <p>At Architex, we understand the importance of protecting your intellectual property. We treat all client information with the utmost confidentiality and offer comprehensive NDA agreements before beginning any project.</p>
+                        <p>At Architex, we understand the importance of protecting your intellectual property. We treat
+                            all client information with the utmost confidentiality and offer comprehensive NDA
+                            agreements before beginning any project.</p>
                         <p>Our IP protection measures include:</p>
                         <ul>
                             <li>Secure file storage and transfer systems</li>
@@ -130,13 +175,56 @@
                             <li>Comprehensive NDA agreements for all team members</li>
                             <li>Regular security audits and compliance checks</li>
                         </ul>
-                        <p>Check the box in the contact form if you'd like to discuss our NDA policy before sharing project details.</p>
+                        <p>Check the box in the contact form if you'd like to discuss our NDA policy before sharing
+                            project details.</p>
+                    </div>
+
+                    <!-- Join Our Team Section -->
+                    <div class="join-team">
+                        <h2>Architects: Join Our Team</h2>
+                        <p>Are you an architectural professional looking to expand your opportunities and work on exciting projects?
+                            We're always looking for talented personnel to join our team.</p>
+                        <p>Submit your details through our online application form</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdttBM6R8LYwiT-BZo3Ldxi-VTmOvjaESDuWpKqXmH2d6p4eg/viewform?usp=dialog"
+                            class="join-team-btn" target="_blank" rel="noopener noreferrer">Apply to Join Our Team</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guarantee Section -->
+            <section class="guarantee-box">
+                <div class="guarantee-content">
+                    <h2>Our Guarantee</h2>
+                    <h3>Confidentiality Guaranteed</h3>
+                    <p>We understand the importance of protecting your intellectual property. All client projects are
+                        covered by our comprehensive NDA policy, ensuring your ideas and designs remain secure.</p>
+                    <p>If you'd like to review our NDA before the meeting, please mention this when scheduling your
+                        appointment.</p>
+                    <div class="guarantee-links">
+                        <a href="benefits.html" class="guarantee-link">Learn About Our Benefits</a>
+                        <a href="hire.html" class="guarantee-link">Hire Us Now</a>
                     </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <script src="contact-script.js"></script>
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/27723636632" class="whatsapp-button" target="_blank" rel="noopener noreferrer"
+            aria-label="Contact us on WhatsApp">
+            <img src="assets/whatsapp-logo.png" alt="WhatsApp Logo">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright">© 2025 Architex. All Rights Reserved.</p>
+            <p class="designer-credit">Website designed by <a href="https://apexplanners.co.za" target="_blank"
+                    rel="noopener noreferrer">Apex Planners</a></p>
+        </div>
+    </footer>
+
+    <script src="contact-script.js?v=1.0.1"></script>
 </body>
-</html>

@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const processSteps = document.querySelectorAll('.process-step');
     const infoCards = document.querySelectorAll('.info-card');
+    const guaranteeBox = document.querySelector('.guarantee-box');
+    const pageLinks = document.querySelector('.page-links');
 
     // Bird animation elements
     const birdContainer = document.getElementById('follow-bird-container');
@@ -12,7 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let mouseY = 0;
     let birdX = 40;
     let birdY = 40;
-    let speed = 0.15; // Increased speed for closer following
+    let speed = 0.4; // Increased speed for closer following
+
+    // Function to check if element is in viewport
+    const isInViewport = (element) => {
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+        );
+    };
+
+    // Function to animate elements when they come into view
+    const animateOnScroll = () => {
+        if (guaranteeBox && !guaranteeBox.classList.contains('animate')) {
+            guaranteeBox.classList.add('animate');
+        }
+        if (pageLinks && !pageLinks.classList.contains('animate')) {
+            pageLinks.classList.add('animate');
+        }
+    };
+
+    // Initial check for elements in viewport
+    animateOnScroll();
+
+    // Add scroll event listener
+    window.addEventListener('scroll', animateOnScroll);
 
     // Add hover effects to process steps
     processSteps.forEach(step => {
@@ -75,15 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
             birdY += dy * speed;
 
             // Apply the new position with some constraints to keep bird within reasonable bounds
-            const maxX = window.innerWidth - 150; // Adjust based on bird width
-            const maxY = window.innerHeight - 112; // Adjust based on bird height
+            const maxX = window.innerWidth - 50; // Allow bird to go closer to edges
+            const maxY = window.innerHeight - 50; // Allow bird to go closer to edges
 
             // Constrain the bird's movement area
             const constrainedX = Math.max(0, Math.min(maxX, birdX));
             const constrainedY = Math.max(0, Math.min(maxY, birdY));
 
             // Apply the transformation - offset by half the bird's width/height to center it on cursor
-            birdContainer.style.transform = `translate(${constrainedX - 75}px, ${constrainedY - 56}px)`;
+            // Reduce the offset so the bird is closer to the mouse
+            birdContainer.style.transform = `translate(${constrainedX - 0}px, ${constrainedY - 0}px)`;
 
             // Add slight rotation based on movement direction for more natural feel
             const rotation = dx * 0.05; // Subtle rotation based on horizontal movement
@@ -104,15 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add special behavior when hovering over the bird
         followBird.addEventListener('mouseenter', () => {
-            // Keep a relatively fast speed even when hovered
-            speed = 0.1;
+            // Keep a fast speed even when hovered
+            speed = 0.45;
             // Add a special effect or animation
             followBird.style.filter = 'drop-shadow(0 0 10px rgba(106, 141, 115, 0.7))';
         });
 
         followBird.addEventListener('mouseleave', () => {
             // Return to normal speed
-            speed = 0.15;
+            speed = 0.28;
             // Remove special effect
             followBird.style.filter = 'none';
         });

@@ -1,0 +1,21 @@
+graph TD
+    A[Admin Logs In] --> B[Admin Dashboard];
+    B --> C[User Management];
+    C --> D[View/Edit Clients];
+    C --> E[View/Edit/Approve Architects];
+    B --> F[Job Management];
+    F --> G[Review New Job Submissions];
+    G -- Approve --> H[Assign Job to Architect];
+    G -- Reject/Clarify --> I[Contact Client];
+    F --> J[View All Jobs];
+    J --> K{Select Job};
+    K --> L[View Details/Status];
+    K --> M[Manage Job Cards for Job];
+    K --> N[Update Overall Job Status];
+    B --> O[Time Log Oversight];
+    O --> P[View Time Entries by Architect/Job];
+    B --> Q[Communication Hub];
+    Q --> R[View/Respond to Architect DMs];
+    B --> S[Reporting];
+    S --> T[Generate User/Job/Time Reports];
+    B --> U[System Settings];

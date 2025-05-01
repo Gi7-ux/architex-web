@@ -1,0 +1,41 @@
+graph TD
+    A[User Visits Architex.co.za] --> B{User Type?};
+    B -- Client --> C[Register/Login];
+    B -- Architect --> D[Register/Login];
+    B -- Admin --> E[Login];
+
+    C --> F[Create New Job Request];
+    F --> G[Admin Reviews Job];
+    G -- Valid --> H[Admin Assigns Job to Architect];
+    G -- Invalid --> I[Admin Contacts Client for Clarification];
+
+    D --> J[View Assigned Jobs/Job Cards];
+    H --> J;
+    H --> K[Notify Architect & Client];
+    K --> J;
+    K --> L[Client Views Job Status];
+
+    J --> M[Architect Selects Job Card];
+    M --> N[Architect Starts Timer (Logs Time & Location)];
+    N --> O[Architect Works on Task];
+    O --> P[Architect Stops Timer];
+    P --> Q[Architect Updates Job Card Status];
+    Q --> R{More Tasks?};
+    R -- Yes --> M;
+    R -- No --> S[Architect Marks Job/Phase Complete];
+
+    Q --> T[Progress Tracker Updated];
+    T --> L;
+
+    U[Architect Needs Help] --> V[Architect DMs Admin];
+    V --> W[Admin Responds to Architect];
+
+    E --> X[Admin Manages Users];
+    E --> G;
+    E --> H;
+    E --> W;
+    E --> Y[Admin Views Reports];
+
+    S --> Z[Admin Reviews Completed Work];
+    Z --> AA[Admin Updates Final Job Status];
+    AA --> L;

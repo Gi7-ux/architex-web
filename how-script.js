@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const processSteps = document.querySelectorAll('.process-step');
     const detailSections = document.querySelectorAll('.detail-section');
     const testimonials = document.querySelector('.testimonials');
+    const guaranteeBox = document.querySelector('.guarantee-box');
     const getStarted = document.querySelector('.get-started');
 
     // Function to check if element is in viewport
     const isInViewport = (element, offset = 100) => {
+        if (!element) return false;
         const rect = element.getBoundingClientRect();
         return (
             rect.top <= (window.innerHeight - offset) &&
@@ -28,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check testimonials section
         if (isInViewport(testimonials) && !testimonials.classList.contains('animate')) {
             testimonials.classList.add('animate');
+        }
+
+        // Check guarantee box section
+        if (isInViewport(guaranteeBox) && !guaranteeBox.classList.contains('animate')) {
+            guaranteeBox.classList.add('animate');
         }
 
         // Check get started section
@@ -71,10 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             switch(stepNumber) {
                 case '1':
-                    targetSection = document.getElementById('submit-project');
+                    targetSection = document.getElementById('schedule-briefing');
                     break;
                 case '2':
-                    targetSection = document.getElementById('match-architects');
+                    targetSection = document.getElementById('meet-online');
                     break;
                 case '3':
                     targetSection = document.getElementById('collaborate');
@@ -106,16 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
         step.style.cursor = 'pointer';
     });
 
-    // Add special animation for the origami bird in the get started section
-    const origamiBackground = document.querySelector('.origami-background');
+    // Add null checks for all elements before using them
+    if (origamiBird) {
+        origamiBird.classList.add('fly-across-animation');
+    }
 
-    origamiBackground.addEventListener('mouseenter', () => {
-        origamiBackground.style.transform = 'scale(1.02)';
-        origamiBackground.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
-    });
-
-    origamiBackground.addEventListener('mouseleave', () => {
-        origamiBackground.style.transform = 'scale(1)';
-        origamiBackground.style.boxShadow = 'none';
-    });
+    if (pageIntro) {
+        pageIntro.classList.add('animate');
+    }
 });

@@ -1,0 +1,338 @@
+/* Common Components Styles */
+
+/* Guarantee Box Styles */
+.guarantee-box {
+    background-color: var(--primary-color);
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 0 auto 3rem;
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.guarantee-box.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guarantee-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.guarantee-content h2 {
+    color: white;
+    font-family: 'Freedom', 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.guarantee-content h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.guarantee-content p {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.guarantee-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guarantee-link {
+    background-color: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.guarantee-link:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .guarantee-box {
+        padding: 2.5rem;
+    }
+
+    .guarantee-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .guarantee-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .guarantee-content p {
+        font-size: 1rem;
+    }
+
+    .guarantee-links {
+        grid-template-columns: 1fr;
+    }
+
+    .guarantee-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* WhatsApp Button */
+/* WhatsApp Container */
+.whatsapp-container {
+    position: fixed;
+    bottom: 70px;
+    /* Adjusted to avoid overlap with footer */
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* WhatsApp Button */
+.whatsapp-button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: gracefulBounce 2s ease-in-out infinite;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    animation-play-state: paused;
+}
+
+.whatsapp-button img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Graceful Bounce Animation */
+@keyframes gracefulBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: transparent !important;
+    padding: 0.5rem 0 !important;
+    margin-top: 0;
+    /* Reduced from 1rem to fix white space gap */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-content {
+    padding: 0.5rem 0.5rem !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-nav {
+    display: none;
+    /* Hide the footer navigation buttons */
+}
+
+.footer-nav-button {
+    display: none;
+    /* Hide the footer navigation buttons */
+}
+
+.footer-divider {
+    display: none;
+    /* Hide the footer divider */
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.designer-credit {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.designer-credit a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.designer-credit a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .whatsapp-container {
+        bottom: 60px;
+        right: 15px;
+    }
+
+    .whatsapp-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-button img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .site-footer {
+        padding: 0.8rem 0;
+        margin-top: 0;
+    }
+
+    .footer-content {
+        padding: 1.2rem 1rem;
+    }
+
+    /* Footer nav is hidden */
+
+    .copyright {
+        font-size: 0.85rem;
+    }
+
+    .designer-credit {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .guarantee-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .whatsapp-container {
+        bottom: 55px;
+        right: 10px;
+    }
+
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-button img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .site-footer {
+        padding: 0.6rem 0;
+        margin-top: 0;
+    }
+
+    .footer-content {
+        padding: 1rem 0.8rem;
+    }
+
+    /* Footer nav is hidden */
+
+    .copyright {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .designer-credit {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .guarantee-box {
+        padding: 1.5rem 1rem;
+    }
+
+    .whatsapp-container {
+        bottom: 50px;
+        right: 8px;
+    }
+
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .whatsapp-button img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .site-footer {
+        padding: 0.5rem 0;
+        margin-top: 0;
+    }
+
+    .footer-content {
+        padding: 0.8rem 0.6rem;
+    }
+
+    /* Footer nav is hidden */
+
+    .copyright {
+        font-size: 0.75rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .designer-credit {
+        font-size: 0.65rem;
+    }
+}

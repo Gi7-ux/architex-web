@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const origamiBird = document.getElementById('origami-bird');
     const freedomText = document.querySelector('.freedom-text');
     const benefitCards = document.querySelectorAll('.benefit-card');
+    const guaranteeBox = document.querySelector('.guarantee-box');
     const ctaSection = document.querySelector('.cta-section');
 
     console.log('Bird container:', birdContainer);
@@ -29,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.classList.add('animate');
             }
         });
+
+        // Check guarantee box section
+        if (isInViewport(guaranteeBox) && !guaranteeBox.classList.contains('animate')) {
+            guaranteeBox.classList.add('animate');
+        }
 
         // Check CTA section
         if (isInViewport(ctaSection) && !ctaSection.classList.contains('animate')) {

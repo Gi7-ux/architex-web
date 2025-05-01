@@ -1,0 +1,23 @@
+graph TD
+    A[Architect Logs In] --> B[Dashboard];
+    B --> C[View Assigned Jobs];
+    C --> D{Select Job};
+    D --> E[View Job Details & Job Cards];
+    E --> F{Select Job Card};
+    F --> G[Start Time Tracker];
+    G -- Location Tracked --> H[Perform Work];
+    H --> I[Stop Time Tracker];
+    I --> J[Update Job Card Status];
+    J --> K[Add Notes/Comments];
+    K --> E; subgraph Time Tracking Loop
+      G
+      H
+      I
+    end
+    E --> L{All Cards Done?};
+    L -- Yes --> M[Notify Admin/Mark Phase Complete];
+    L -- No --> E;
+    B --> N[View Time Log History];
+    B --> O[Manage Profile];
+    B --> P[View Notifications];
+    B --> Q[Direct Message Admin];

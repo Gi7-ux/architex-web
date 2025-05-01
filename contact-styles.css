@@ -128,34 +128,24 @@
     flex-wrap: wrap;
     gap: 3rem;
     margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.contact-section.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-form-container {
     flex: 1;
     min-width: 300px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-    transition-delay: 0.2s;
-}
-
-.contact-form-container.animate {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .contact-info-container {
     flex: 1;
     min-width: 300px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-    transition-delay: 0.4s;
-}
-
-.contact-info-container.animate {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Form Styles */
@@ -268,6 +258,91 @@
     line-height: 1.5;
 }
 
+/* Guarantee Box Styles */
+.guarantee-box {
+    background-color: var(--primary-color);
+    padding: 3rem;
+    border-radius: 0;
+    margin: 0 0 3rem;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.guarantee-box.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guarantee-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.guarantee-content h2 {
+    color: white;
+    font-family: 'Freedom', 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.guarantee-content h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.guarantee-content p {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.guarantee-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .guarantee-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+.guarantee-link {
+    background-color: white;
+    color: var(--primary-dark);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.guarantee-link:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* NDA Policy Styles */
 .nda-policy {
     background-color: white;
@@ -275,6 +350,7 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-left: 4px solid var(--primary-color);
+    margin-bottom: 2rem;
 }
 
 .nda-policy h2 {
@@ -299,12 +375,110 @@
     line-height: 1.5;
 }
 
+/* Join Team Styles */
+.join-team {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary-light);
+}
+
+.join-team.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.join-team h2 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.join-team p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.join-team-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.join-team-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Loading and Success States */
+.form-loading,
+.form-success {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.form-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(87, 146, 126, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-success {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-success h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-success p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .contact-section {
         flex-direction: column;
     }
-    
+
     .contact-form-container,
     .contact-info-container {
         width: 100%;
@@ -315,20 +489,29 @@
     .page-intro h1 {
         font-size: 2.8rem;
     }
-    
+
     .page-intro p {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 576px) {
+
     .contact-form,
     .contact-info,
-    .nda-policy {
+    .nda-policy,
+    .join-team {
         padding: 1.5rem;
     }
-    
+
     .page-intro h1 {
         font-size: 2.2rem;
+    }
+
+    .join-team-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
     }
 }

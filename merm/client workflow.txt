@@ -1,0 +1,16 @@
+graph TD
+    A[Client Logs In] --> B[Dashboard];
+    B --> C[Create New Job];
+    C --> D[Submit Job Details];
+    D --> E[Job Pending Admin Review];
+    B --> F[View My Jobs];
+    F --> G{Select Job};
+    G --> H[View Job Details & Status];
+    H --> I[View Progress Updates];
+    H --> J[View Time Summary (Optional)];
+    E --> F;
+    I --> F;
+    J --> F;
+    B --> K[Manage Profile];
+    B --> L[View Notifications];
+    B --> M[Contact Admin (via form/link)];
